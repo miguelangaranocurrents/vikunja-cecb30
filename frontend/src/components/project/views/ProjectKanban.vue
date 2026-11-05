@@ -354,8 +354,11 @@ const DRAG_OPTIONS = {
 	dragClass: 'task-dragging',
 	delayOnTouchOnly: true,
 	delay: 1000,
-	// Start scrolling the board well before the pointer reaches its very edge,
-	// otherwise buckets off screen are hard to reach while dragging.
+	// Let sortable scroll the board itself instead of relying on the browser's
+	// native drag autoscroll, which only reacts right at the edge (if at all),
+	// and start scrolling well before the pointer reaches the edge so buckets
+	// off screen can be reached while dragging.
+	forceAutoScrollFallback: true,
 	scrollSensitivity: 100,
 } as const
 
