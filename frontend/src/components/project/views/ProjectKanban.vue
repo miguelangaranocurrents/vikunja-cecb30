@@ -354,6 +354,9 @@ const DRAG_OPTIONS = {
 	dragClass: 'task-dragging',
 	delayOnTouchOnly: true,
 	delay: 1000,
+	// Start scrolling the board well before the pointer reaches its very edge,
+	// otherwise buckets off screen are hard to reach while dragging.
+	scrollSensitivity: 100,
 } as const
 
 const MIN_SCROLL_HEIGHT_PERCENT = 0.25
